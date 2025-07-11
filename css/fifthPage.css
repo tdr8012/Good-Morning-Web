@@ -1,0 +1,259 @@
+:root {
+  --primary: #fff;
+  --bg-color: #fde6df;
+  --bg-envelope-color: #fbe8e8;
+  --envelope-tab: #f7d1d8;
+  --envelope-cover: #f2b7c3;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --txt-color: #aa4a63;
+  --heart-color: #ff5d8f;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fde6df;
+  font-family: 'Times New Roman', Times, serif;
+  transition: opacity 1s ease;
+}
+
+.big-container {
+  background-color: #fbd9d9;
+  text-align: center;
+  border-radius: 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  padding: 60px;
+  width: 900px;
+  height: 400px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items:self-start;
+  backdrop-filter: blur(10px);
+  background-clip: padding-box;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+  margin-bottom: 20px;
+  text-align: center;
+  margin-left: 80px;
+}
+
+.subtitle p {
+  position: relative;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  color: var(--txt-color);
+  background: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 10px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.subtitle p::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.6) transparent;
+  border-width: 20px 20px 0;
+  bottom: -20px;
+  left: 50%;
+  margin-left: -20px;
+}
+
+.subtitle p.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.subtitle p.hidden::after {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.envelope-wrapper {
+  background: var(--bg-envelope-color);
+  box-shadow: 0 0 40px var(--shadow-color);
+  width: 300px;
+  height: 230px;
+  position: relative;
+}
+
+.envelope-wrapper.shake {
+  animation: shakeCycle 3s infinite ease-in-out;
+}
+
+
+.envelope {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.envelope::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  border-top: 130px solid var(--envelope-tab);
+  border-right: 150px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: all 0.5s ease-in-out 0.7s;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+
+
+.envelope::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 0px;
+  height: 0px;
+  border-top: 130px solid transparent;
+  border-right: 150px solid var(--envelope-cover);
+  border-bottom: 100px solid var(--envelope-cover);
+  border-left: 150px solid var(--envelope-cover);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.envelope > .letter {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 90%;
+  height: auto;
+  background: var(--primary);
+  text-align: center;
+  transition: opacity 0.5s ease-in-out, left 2s ease-in-out, top 2s ease-in-out, transform 2s ease-in-out;
+  opacity: 0;
+  box-shadow: 0 0 5px var(--shadow-color);
+  padding: 20px 10px;
+  z-index: 1;
+  border-radius:35px;
+}
+
+
+
+
+
+.envelope > .letter > .text {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: var(--txt-color);
+  text-align: left;
+  font-size: 10px;
+}
+
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background: var(--heart-color);
+  z-index: 4;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: transform 0.5s ease-in-out 0.5s;
+  box-shadow: 0 1px 6px var(--shadow-color);
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: var(--heart-color);
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -7.5px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: -7.5px;
+}
+
+
+
+.flap > .envelope::before {
+  transform: rotateX(180deg);
+  transition: transform 0.6s ease-in-out;
+}
+
+.flap > .envelope > .letter {
+  opacity: 1;
+  left: 400px;
+  top: 50%;
+  transform: translateY(-50%) scale(1);
+  width: 350px;
+  height: auto;
+  padding: 30px 20px;
+  z-index: 10;
+  transition: opacity 0.5s ease-in-out 0.6s, left 2s ease-in-out 0.6s, top 2s ease-in-out 0.6s, transform 2s ease-in-out 0.6s;
+
+}
+
+.flap > .heart {
+  transform: rotate(90deg);
+  transition-delay: 0.4s;
+}
+
+
+
+
+@keyframes shakeCycle {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  10% {
+    transform: translate(-2px, 0) rotate(-1deg);
+  }
+  20% {
+    transform: translate(2px, 0) rotate(1deg);
+  }
+  30% {
+    transform: translate(-2px, 0) rotate(-1deg);
+  }
+  40% {
+    transform: translate(2px, 0) rotate(1deg);
+  }
+  50% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+

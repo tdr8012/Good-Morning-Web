@@ -32,13 +32,22 @@ body.loaded {
     border: 2px solid rgba(0, 0, 0, 0.1);
 }
 
-.question-container h1 {
-    font-size: 50px;
+.question-container h1{
+    font-family: 'Parisienne', cursive;
+    font-size: 60px;
+    color: rgb(236, 112, 152);
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .question-container p {
-    font-size: 50px;
-    margin: 20px 0;
+    font-family: 'Parisienne', cursive;
+    font-size: 60px;
+    color: rgb(236, 112, 152);
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .question-container img {

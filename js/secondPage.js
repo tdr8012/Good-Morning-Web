@@ -6,9 +6,10 @@ window.addEventListener("load", () => {
 
 
 changeMindBtn.addEventListener('click', function() {
+    event.preventDefault();
     document.body.classList.add("fade-out");
 
     setTimeout(() => {
-        window.location.href = '../ThirdPage/thirdPage.html';
+        window.location.href = '../html/fourthPage.html';
     }, 1000);
 });

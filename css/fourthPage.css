@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 232, 222);
+    font-family: 'Times New Roman', Times, serif;
+    transition: opacity 1s ease;
+
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+
+.container {
+    background-color: rgb(255, 228, 232);
+    text-align: center;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    padding: 60px;
+    width: auto;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background-clip: padding-box;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-family: 'Parisienne', cursive;
+  font-size: 60px;
+  color: rgb(236, 112, 152);
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+.loading {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  background-color: rgb(252, 182, 192);
+  border-radius: 50%;
+  box-shadow: 5px 5px 15px rgba(200, 150, 130, 0.5);
+  margin: 30px;
+  animation: load 1.2s ease-in-out infinite;
+}
+
+@keyframes load {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.75);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#loadingBar {
+  width: 900px;
+  height: 100px;
+  border: 5px solid rgb(252, 182, 192);
+  border-radius: 50px;
+  box-shadow: 5px 5px 15px rgba(200, 150, 130, 0.5);
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 40px;
+}
+
+#mocha {
+  width: 55px;
+  height: 70px;
+}
+
+#milk {
+  width: 65px;
+  height: 85px;
+}
+
+.heart-container {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#heart {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(252, 90, 120);
+  transform: rotate(-45deg);
+  animation: moveHeart 3s linear infinite;
+  z-index: 5;
+}
+
+#heart::before,
+#heart::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(252, 90, 120);
+  border-radius: 50%;
+}
+
+#heart::before {
+  top: -15px;
+  left: 0;
+}
+
+#heart::after {
+  top: 0;
+  left: 15px;
+}
+
+@keyframes moveHeart {
+  0% {
+    left: 0%;
+    opacity: 0;
+    transform: rotate(-45deg) scale(0.5);
+  }
+ 
+  100% {
+    left: 100%;
+    transform: rotate(-45deg) scale(1.2);
+  }
+}

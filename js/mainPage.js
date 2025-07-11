@@ -6,8 +6,8 @@ noBtn.addEventListener('mouseenter', buttonMovesWhenHover);
 noBtn.addEventListener('touchstart', buttonMovesWhenHover);
 
 function buttonMovesWhenHover() {
-    const x = Math.floor(Math.random() * (window.innerWidth - 200));
-    const y = Math.floor(Math.random() * (window.innerHeight - 80));
+    const x = Math.floor(Math.random() * (window.innerWidth - 100));
+    const y = Math.floor(Math.random() * (window.innerHeight - 30));
 
     noBtn.style.position = 'absolute';
     noBtn.style.left = `${x}px`;
@@ -22,7 +22,7 @@ yesBtn.addEventListener("click", () => {
     document.body.classList.add("fade-out");
 
     setTimeout(() => {
-        window.location.href = '../SecondPage/secondPage.html';
+        window.location.href = '../html/secondPage.html';
     }, 1000);
 });
 
