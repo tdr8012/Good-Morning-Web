@@ -21,6 +21,10 @@ body {
   transition: opacity 1s ease;
 }
 
+body.loaded {
+    opacity: 1;
+}
+
 .big-container {
   background-color: #fbd9d9;
   text-align: center;

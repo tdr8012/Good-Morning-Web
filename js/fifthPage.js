@@ -1,3 +1,8 @@
+window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+});
+
+
 const envelopeWrapper = document.querySelector('.envelope-wrapper');
 const heart = document.querySelector('.heart');
 const subtitleP = document.querySelector('.subtitle p');

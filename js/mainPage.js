@@ -2,16 +2,21 @@ const noBtn = document.getElementById('noBtn');
 const yesBtn = document.getElementById('yesBtn');
 const heartContainer = document.getElementById("heart-container");
 
+let originalX = noBtn.offsetLeft;
+let originalY = noBtn.offsetTop;
+
 noBtn.addEventListener('mouseenter', buttonMovesWhenHover);
 noBtn.addEventListener('touchstart', buttonMovesWhenHover);
 
 function buttonMovesWhenHover() {
-    const x = Math.floor(Math.random() * (window.innerWidth - 100));
-    const y = Math.floor(Math.random() * (window.innerHeight - 30));
+    const maxOffset = 150;
+
+    const offsetX = Math.floor((Math.random() * 7 - 1) * maxOffset);
+    const offsetY = Math.floor((Math.random() * 7 - 1) * maxOffset);
 
     noBtn.style.position = 'absolute';
-    noBtn.style.left = `${x}px`;
-    noBtn.style.top = `${y}px`;
+    noBtn.style.left = `${originalX + offsetX}px`;
+    noBtn.style.top = `${originalY + offsetY}px`;
 }
 
 yesBtn.addEventListener("click", () => {

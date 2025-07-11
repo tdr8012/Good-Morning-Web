@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
 
 
 changeMindBtn.addEventListener('click', function() {
-    event.preventDefault();
+    
     document.body.classList.add("fade-out");
 
     setTimeout(() => {
