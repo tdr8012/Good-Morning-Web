@@ -114,8 +114,8 @@ body {
 
 @media (max-width: 1024px) {
   .question-container {
-    width: 90%;
-    padding: 30px;
+    width: 70%;
+    padding: 20px;
   }
   .question-container h1,
   .question-container p {
@@ -133,8 +133,8 @@ body {
 
 @media (max-width: 768px) {
   .question-container {
-    width: 95%;
-    padding: 25px;
+    width: 75%;
+    padding: 15px;
   }
   .question-container h1,
   .question-container p {
