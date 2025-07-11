@@ -11,8 +11,8 @@ noBtn.addEventListener('touchstart', buttonMovesWhenHover);
 function buttonMovesWhenHover() {
     const maxOffset = 150;
 
-    const offsetX = Math.floor((Math.random() * 7 - 1) * maxOffset);
-    const offsetY = Math.floor((Math.random() * 7 - 1) * maxOffset);
+    const offsetX = Math.floor((Math.random() * 3 - 1) * maxOffset);
+    const offsetY = Math.floor((Math.random() * 3 - 1) * maxOffset);
 
     noBtn.style.position = 'absolute';
     noBtn.style.left = `${originalX + offsetX}px`;
