@@ -8,12 +8,13 @@ body {
     background-color: rgb(255, 232, 222);
     font-family: 'Times New Roman', Times, serif;
     transition: opacity 1s ease;
-    box-sizing: border-box;
+
 }
 
 body.loaded {
     opacity: 1;
 }
+
 
 .container {
     background-color: rgb(255, 228, 232);
@@ -22,8 +23,7 @@ body.loaded {
     border-radius: 30px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
     padding: 60px;
-    width: 100%;
-    max-width: 450px;
+    width: auto;
     min-height: auto;
     display: flex;
     flex-direction: column;
@@ -32,190 +32,123 @@ body.loaded {
     backdrop-filter: blur(10px);
     background-clip: padding-box;
     border: 2px solid rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
 }
 
 h1 {
-    font-family: 'Parisienne', cursive;
-    font-size: 60px;
-    color: rgb(236, 112, 152);
-    font-weight: normal;
-    margin-bottom: 20px;
-    text-align: center;
-    word-break: break-word;
+  font-family: 'Parisienne', cursive;
+  font-size: 60px;
+  color: rgb(236, 112, 152);
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-p {
-    font-size: 20px;
-    color: rgb(236, 112, 152);
-    margin: 10px 0;
-    line-height: 1.4;
-    word-break: break-word;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 20px;
-    border-radius: 15px;
-}
 
 .loading {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 
 .circle {
-    width: 80px;
-    height: 80px;
-    flex-shrink: 0;
-    background-color: rgb(252, 182, 192);
-    border-radius: 50%;
-    box-shadow: 5px 5px 15px rgba(200, 150, 130, 0.5);
-    margin: 30px;
-    animation: load 1.2s ease-in-out infinite;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  background-color: rgb(252, 182, 192);
+  border-radius: 50%;
+  box-shadow: 5px 5px 15px rgba(200, 150, 130, 0.5);
+  margin: 30px;
+  animation: load 1.2s ease-in-out infinite;
 }
 
 @keyframes load {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(0.75);
-        opacity: 0.6;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.75);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 #loadingBar {
-    width: 100%;
-    max-width: 900px;
-    height: 100px;
-    border: 5px solid rgb(252, 182, 192);
-    border-radius: 50px;
-    box-shadow: 5px 5px 15px rgba(200, 150, 130, 0.5);
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    padding: 0 40px;
-    box-sizing: border-box;
+  width: 900px;
+  height: 100px;
+  border: 5px solid rgb(252, 182, 192);
+  border-radius: 50px;
+  box-shadow: 5px 5px 15px rgba(200, 150, 130, 0.5);
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 40px;
 }
 
 #mocha {
-    width: 55px;
-    height: 70px;
+  width: 55px;
+  height: 70px;
 }
 
 #milk {
-    width: 65px;
-    height: 85px;
+  width: 65px;
+  height: 85px;
 }
 
 .heart-container {
-    flex: 1;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
+  flex: 1;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 #heart {
-    position: absolute;
-    top: 35px;
-    left: 0;
-    width: 30px;
-    height: 30px;
-    background-color: rgb(252, 90, 120);
-    transform: rotate(-45deg);
-    animation: moveHeart 3s linear infinite;
-    z-index: 5;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(252, 90, 120);
+  transform: rotate(-45deg);
+  animation: moveHeart 3s linear infinite;
+  z-index: 5;
 }
 
 #heart::before,
 #heart::after {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-color: rgb(252, 90, 120);
-    border-radius: 50%;
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(252, 90, 120);
+  border-radius: 50%;
 }
 
 #heart::before {
-    top: -15px;
-    left: 0;
+  top: -15px;
+  left: 0;
 }
 
 #heart::after {
-    top: 0;
-    left: 15px;
+  top: 0;
+  left: 15px;
 }
 
 @keyframes moveHeart {
-    0% {
-        left: 0%;
-        opacity: 0;
-        transform: rotate(-45deg) scale(0.5);
-    }
-    100% {
-        left: 100%;
-        transform: rotate(-45deg) scale(1.2);
-    }
-}
-
-/* Responsive adjustments for smaller screens */
-@media screen and (max-width: 600px) {
-    .container {
-        padding: 30px 20px;
-        max-width: 90%;
-    }
-
-    h1 {
-        font-size: 38px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    .circle {
-        width: 60px;
-        height: 60px;
-        margin: 15px;
-    }
-
-    #loadingBar {
-        height: 80px;
-        padding: 0 20px;
-    }
-
-    #mocha {
-        width: 40px;
-        height: 50px;
-    }
-
-    #milk {
-        width: 50px;
-        height: 65px;
-    }
-
-    #heart,
-    #heart::before,
-    #heart::after {
-        width: 20px;
-        height: 20px;
-    }
-
-    #heart {
-        top: 30px;
-    }
+  0% {
+    left: 0%;
+    opacity: 0;
+    transform: rotate(-45deg) scale(0.5);
+  }
+ 
+  100% {
+    left: 100%;
+    transform: rotate(-45deg) scale(1.2);
+  }
 }
