@@ -258,6 +258,17 @@ body.loaded {
     border-bottom: 70px solid var(--envelope-cover);
     border-left: 110px solid var(--envelope-cover);
   }
+  .flap > .envelope::before {
+    transform: rotateX(180deg);
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .flap > .heart {
+    transform: rotate(90deg);
+    transition-delay: 0.4s;
+  }
+
+
 
   .flap > .envelope > .letter {
     left: 50%;
