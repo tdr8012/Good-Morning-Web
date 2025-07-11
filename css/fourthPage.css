@@ -156,8 +156,3 @@ h1 {
     transform: rotate(-45deg) scale(1.2);
   }
 }
-
-
-window.addEventListener("load", () => {
-    document.body.classList.add("loaded");
-});

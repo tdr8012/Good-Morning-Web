@@ -42,8 +42,12 @@ body {
 }
 
 .question-container p {
-    font-size: 28px;
-    margin: 20px 0;
+    font-family: 'Parisienne', cursive;
+    font-size: 48px;
+    color: rgb(236, 112, 152);
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .button-group {
