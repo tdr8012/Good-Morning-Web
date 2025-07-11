@@ -56,47 +56,4 @@ body.loaded {
     margin: 0 0 30px;
 }
 
-/* ===== Responsive Styles ===== */
 
-@media (max-width: 1024px) {
-    .question-container {
-        width: 90%;
-        padding: 40px;
-        min-height: auto;
-    }
-    .question-container h1,
-    .question-container p {
-        font-size: 40px;
-    }
-    .question-container img {
-        width: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .question-container {
-        width: 95%;
-        padding: 30px;
-    }
-    .question-container h1,
-    .question-container p {
-        font-size: 32px;
-    }
-    .question-container img {
-        width: 250px;
-    }
-}
-
-@media (max-width: 480px) {
-    .question-container {
-        width: 98%;
-        padding: 20px;
-    }
-    .question-container h1,
-    .question-container p {
-        font-size: 24px;
-    }
-    .question-container img {
-        width: 200px;
-    }
-}
