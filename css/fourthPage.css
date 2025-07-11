@@ -6,186 +6,55 @@ body {
     align-items: center;
     background-color: rgb(255, 232, 222);
     font-family: 'Times New Roman', Times, serif;
-    opacity: 0;
-    transition: opacity 1s ease;
 }
 
-body.loaded {
-    opacity: 1;
-}
-
-.question-container {
-    background-color: rgb(255, 228, 232);
-    text-align: center;
-    border: none;
-    border-radius: 30px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-    padding: 40px;
-    max-width: 400px;
-    width: 100%;
+.loading {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(10px);
-    background-clip: padding-box;
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    margin: 0;
 }
 
-.question-container h1 {
-    font-family: 'Parisienne', cursive;
-    font-size: 48px;
-    color: rgb(236, 112, 152);
-    font-weight: normal;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.question-container p {
-    font-family: 'Parisienne', cursive;
-    font-size: 28px;
-    color: rgb(236, 112, 152);
-    font-weight: normal;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.question-container img {
-    border-radius: 25px;
-    width: 300px;
-    margin: 0 0 30px;
-}
-
-.progress-bar-container {
-    width: 100%;
-    max-width: 350px;
-    height: 60px;
-    background-color: rgb(255, 216, 223);
-    border-radius: 30px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 15px;
-    margin-top: 30px;
-    position: relative;
-}
-
-.progress-bar-container img.left-character {
-    height: 40px;
-}
-
-.progress-bar-container img.right-character {
-    height: 40px;
-}
-
-.progress-bar-container .heart {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(236, 112, 152);
-    font-size: 28px;
-}
-
-.dot-group {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.dot {
-    width: 40px;
-    height: 40px;
-    background-color: pink;
+.circle {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(252, 182, 192);
     border-radius: 50%;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 15px rgba(200, 150, 130, 0.5);
+    margin: 30px;
 }
 
-@media (max-width: 1024px) {
-    .question-container {
-        width: 90%;
-        padding: 30px;
-    }
-    .question-container h1,
-    .question-container p {
-        font-size: 40px;
-    }
-    .question-container img {
-        width: 250px;
-    }
-    .progress-bar-container {
-        height: 50px;
-        max-width: 300px;
-    }
-    .progress-bar-container img.left-character,
-    .progress-bar-container img.right-character {
-        height: 30px;
-    }
-    .progress-bar-container .heart {
-        font-size: 24px;
-    }
-    .dot {
-        width: 30px;
-        height: 30px;
-    }
+#loadingBar {
+    width: 900px;
+    height: 100px;
+    border: 5px solid rgb(252, 182, 192);
+    border-radius: 50px;
+    box-shadow: 5px 5px 15px rgba(200, 150, 130, 0.5);
+    margin-top: 50px;
+    margin-left: 35px;
+    display: flex;
+    justify-content: center;
 }
 
-@media (max-width: 768px) {
-    .question-container {
-        width: 95%;
-        padding: 25px;
+#mocha {
+    width: 55px;
+    height: 70px;
+    margin-top: 15px;
+    margin-right: 650px;
+}
+
+#milk {
+    width: 65px;
+    height: 85px;
+    margin-top: 5px;
+}
+
+/* butterfly effect */
+@keyframes flutter {
+    from {
+        transform: rotateX(0);
     }
-    .question-container h1,
-    .question-container p {
-        font-size: 32px;
-    }
-    .question-container img {
-        width: 220px;
-    }
-    .progress-bar-container {
-        height: 45px;
-        max-width: 250px;
-    }
-    .progress-bar-container img.left-character,
-    .progress-bar-container img.right-character {
-        height: 26px;
-    }
-    .progress-bar-container .heart {
-        font-size: 20px;
-    }
-    .dot {
-        width: 24px;
-        height: 24px;
+    to {
+        transform: rotateX(80deg);
     }
 }
 
-@media (max-width: 480px) {
-    .question-container {
-        width: 98%;
-        padding: 20px;
-    }
-    .question-container h1,
-    .question-container p {
-        font-size: 24px;
-    }
-    .question-container img {
-        width: 200px;
-    }
-    .progress-bar-container {
-        height: 40px;
-        max-width: 200px;
-    }
-    .progress-bar-container img.left-character,
-    .progress-bar-container img.right-character {
-        height: 22px;
-    }
-    .progress-bar-container .heart {
-        font-size: 18px;
-    }
-    .dot {
-        width: 20px;
-        height: 20px;
-    }
-}
