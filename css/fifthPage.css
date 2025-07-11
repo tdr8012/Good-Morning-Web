@@ -240,6 +240,11 @@ body.loaded {
     width: 220px;
     height: 170px;
   }
+  
+  .envelope-wrapper.shake {
+  animation: shakeCycle 3s infinite ease-in-out;
+  }
+
 
   .envelope::before {
     border-top: 90px solid var(--envelope-tab);
@@ -272,5 +277,30 @@ body.loaded {
   
   .envelope > .letter > .text {
     font-size: 12px;
+  }
+}
+
+
+@keyframes shakeCycle {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  10% {
+    transform: translate(-2px, 0) rotate(-1deg);
+  }
+  20% {
+    transform: translate(2px, 0) rotate(1deg);
+  }
+  30% {
+    transform: translate(-2px, 0) rotate(-1deg);
+  }
+  40% {
+    transform: translate(2px, 0) rotate(1deg);
+  }
+  50% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
   }
 }
