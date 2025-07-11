@@ -212,7 +212,7 @@ body.loaded {
 
 .flap > .envelope > .letter {
   opacity: 1;
-  left: 450px;
+  left: 400px;
   top: 50%;
   transform: translateY(-50%) scale(1);
   width: 350px;
