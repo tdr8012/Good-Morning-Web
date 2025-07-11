@@ -108,7 +108,7 @@ button {
 
 @media (max-width: 768px) {
     .question-container {
-        width: 95%;
+        width: 75%;
         padding: 30px;
     }
     .question-container h1 {
@@ -126,7 +126,7 @@ button {
 
 @media (max-width: 480px) {
     .question-container {
-        width: 98%;
+        width: 78%;
         padding: 20px;
     }
     .question-container h1 {
