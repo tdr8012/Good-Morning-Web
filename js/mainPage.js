@@ -11,12 +11,27 @@ noBtn.addEventListener('touchstart', buttonMovesWhenHover);
 function buttonMovesWhenHover() {
     const maxOffset = 150;
 
-    const offsetX = Math.floor((Math.random() * 3 - 1) * maxOffset);
-    const offsetY = Math.floor((Math.random() * 3 - 1) * maxOffset);
+    let offsetX = Math.floor((Math.random() * 3 - 1) * maxOffset);
+    let offsetY = Math.floor((Math.random() * 3 - 1) * maxOffset);
+
+    let newX = originalX + offsetX;
+    let newY = originalY + offsetY;
+
+    const btnWidth = noBtn.offsetWidth;
+    const btnHeight = noBtn.offsetHeight;
+
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+
+    if (newX < 0) newX = 0;
+    if (newX + btnWidth > viewportWidth) newX = viewportWidth - btnWidth;
+
+    if (newY < 0) newY = 0;
+    if (newY + btnHeight > viewportHeight) newY = viewportHeight - btnHeight;
 
     noBtn.style.position = 'absolute';
-    noBtn.style.left = `${originalX + offsetX}px`;
-    noBtn.style.top = `${originalY + offsetY}px`;
+    noBtn.style.left = `${newX}px`;
+    noBtn.style.top = `${newY}px`;
 }
 
 yesBtn.addEventListener("click", () => {
