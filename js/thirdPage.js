@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
     p.textContent = "But wait, my love 💖 don’t go just yet—I still have a surprise for you 💝";
 
     setTimeout(() => {
-      window.location.href = "../html/fifthPage.html";
+      window.location.href = "/Good-Morning-Web/html/fifthPage.html";
     }, 3000);
 
   }, 3000);

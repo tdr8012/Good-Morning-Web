@@ -10,6 +10,6 @@ changeMindBtn.addEventListener('click', function() {
     document.body.classList.add("fade-out");
 
     setTimeout(() => {
-        window.location.href = '../html/fourthPage.html';
+        window.location.href = '/Good-Morning-Web/html/fourthPage.html';
     }, 1000);
 });

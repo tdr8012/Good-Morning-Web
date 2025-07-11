@@ -27,7 +27,7 @@ yesBtn.addEventListener("click", () => {
     document.body.classList.add("fade-out");
 
     setTimeout(() => {
-        window.location.href = '../html/secondPage.html';
+        window.location.href = '/Good-Morning-Web/html/secondPage.html';
     }, 1000);
 });
 
