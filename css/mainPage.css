@@ -138,12 +138,12 @@ body {
 
 @media (max-width: 768px) {
   .question-container {
-    width: 80%;
+    width: 6%;
     padding: 20px;
   }
   .question-container h1,
   .question-container p {
-    font-size: 32px;
+    font-size: 40px;
   }
   .question-container img {
     width: 200px;
@@ -156,15 +156,15 @@ body {
 
 @media (max-width: 480px) {
   .question-container {
-    width: 95%;
+    width: 75%;
     padding: 16px;
   }
   .question-container h1,
   .question-container p {
-    font-size: 24px;
+    font-size: 40px;
   }
   .question-container img {
-    width: 160px;
+    width: 260px;
   }
   .button-group {
     gap: 8px;
