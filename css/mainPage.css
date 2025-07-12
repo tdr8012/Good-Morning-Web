@@ -15,7 +15,7 @@ body {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
   padding: 40px;
   width: 100%;
-  max-width: 600px; 
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,7 +55,7 @@ body {
 .button-group button {
   background-color: pink;
   color: white;
-  width: 160px;
+  min-width: 160px;
   min-height: 60px;
   border: none;
   border-radius: 12px;
@@ -64,12 +64,12 @@ body {
   margin: 0;
   transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  padding: 8px;
-  white-space: normal;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  padding: 12px 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   text-align: center;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   line-height: 1.2;
@@ -112,7 +112,6 @@ body {
   transition: opacity 1s ease;
 }
 
-/* Tablets */
 @media (max-width: 1024px) {
   .question-container {
     max-width: 80%;
@@ -127,7 +126,6 @@ body {
   }
 }
 
-/* Small Tablets / Large Phones */
 @media (max-width: 768px) {
   .question-container {
     max-width: 90%;
@@ -143,9 +141,13 @@ body {
   .button-group {
     gap: 12px;
   }
+  .button-group button {
+    min-width: 140px;
+    font-size: 20px;
+    padding: 10px 16px;
+  }
 }
 
-/* Phones */
 @media (max-width: 480px) {
   .question-container {
     max-width: 95%;
