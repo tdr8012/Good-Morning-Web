@@ -101,7 +101,7 @@ body {
   transition: opacity 1s ease;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments
 
 @media (max-width: 1024px) {
   .question-container {
@@ -162,4 +162,4 @@ body {
     font-size: 20px;
     padding: 10px;
   }
-}
+} */
