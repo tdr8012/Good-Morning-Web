@@ -116,6 +116,7 @@ body {
     width: 320px;
   }
 }
+  */
 
 @media (max-width: 768px) {
   .question-container {
@@ -140,26 +141,3 @@ body {
   }
 }
 
-@media (max-width: 480px) {
-  .question-container {
-    max-width: 95%;
-    padding: 16px;
-  }
-  .question-container h1,
-  .question-container p {
-    font-size: 24px;
-  }
-  .question-container img {
-    width: 180px;
-  }
-  .button-group {
-    gap: 8px;
-    flex-wrap: nowrap;
-  }
-  .button-group button {
-    width: 100%;
-    height: 50px;
-    font-size: 20px;
-    padding: 10px;
-  }
-} */
