@@ -31,8 +31,10 @@ body.loaded {
   border-radius: 30px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
   padding: 60px;
-  width: 900px;
-  height: 400px;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  padding: 60px;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -225,7 +227,8 @@ body.loaded {
 /* RESPONSIVE FIXES */
 @media screen and (max-width: 950px) {
   .big-container {
-    width: 70%;
+    width: 100%;
+    max-width: 600px;
     height: auto;
     padding: 30px 20px;
     align-items: center;
