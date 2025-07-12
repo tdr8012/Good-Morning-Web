@@ -68,17 +68,27 @@ body.loaded {
 button {
     background-color: pink;
     color: white;
-     width: 250px; 
-    height: 80px;
+    width: 250px;
+    min-height: 80px;
+    height: auto;
     border: none;
     border-radius: 12px;
-    font-size: 32px;
+    font-size: 28px;
     cursor: pointer;
     margin: 10px;
     transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.2;
 }
+
 
 
 /* ===== Responsive Styles ===== */
